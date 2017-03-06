@@ -1,1 +1,200 @@
-{"software":{"name":"publify","major":null,"minor":1,"release_level":"Release candidate","patch":null,"license_name":"gnu_general_public_license_v3","license_label":"GNU GENERAL PUBLIC LICENSE V3","license_sourceurl":"http://www.gnu.org/copyleft/gpl.html","full_title":"Publify","short_title":"Publify","description":"Rails 4 based blog software ","icon_url":"https://avatars2.githubusercontent.com/u/6576968?v=2\u0026s=200","home_page_url":null,"support_page_url":null,"about":null,"language":"ruby","framework":"rails4","deployment_type":"web","web_root_directory":null,"first_run_url":null,"publisher":"engines","blocking_worker_name":null,"required_memory":230,"recommended_memory":345,"http_protocol":"http_and_https","framework_port_overide":null,"custom_start_script":"","custom_install_script":"","custom_post_install_script":"","service_configurations":[{"publisher_namespace":"EnginesSystem","type_path":"filesystem/local/filesystem","variables":{"engine_path":"publifyfs","volume_src":" ","service_name":"_Engines_Builder(engine_name)","permissions":"rw","user":"_Engines_Builder(data_uid)","group":"_Engines_Builder(data_gid)"}},{"publisher_namespace":"EnginesSystem","type_path":"database/sql/mysql","variables":{"name":"_Engines_Builder(engine_name)","database_host":"_Engines_System(mysql_host)","database_name":"_Engines_Builder(engine_name)","db_username":"_Engines_Builder(engine_name)","db_password":"_Engines_System(random(10))","db_flavor":"mysql2","collation":"utf8_general_ci","full_access":"0"}}],"persistent_directories":[{"path":"app/public/files "}],"replacement_strings":[],"persistent_files":[],"installed_packages":[{"name":"publify","source_url":"https://github.com/publify/publify.git","destination":"./","extraction_command":"git","path_to_extracted":"publify"}],"system_packages":[],"workers":[],"ports":[],"external_repositories":[],"rake_tasks":[{"action":"db:migrate","created_at":"2015-03-04T02:47:02.000Z","updated_at":"2015-03-04T02:47:02.000Z","always_run":true},{"action":"db:seed","created_at":"2015-03-04T02:47:16.000Z","updated_at":"2015-03-04T02:47:16.000Z","always_run":false},{"action":"assets:precompile","created_at":"2015-03-04T02:47:28.000Z","updated_at":"2015-03-04T02:47:28.000Z","always_run":true}],"template_files":[{"title":"configuration of email","path":"app/config/mail.yml","content":"production:\r\n default_url_options:\r\n  host: _Engines_Builder(fqdn)\r\n email_delivery:\r\n  delivery_method: :smtp\r\n  smtp_settings:\r\n   address: _Engines_System(smtp_host)\r\n   port: 25\r\n   domain: _Engines_System(default_domain)\r\n   enable_starttls_auto : false\r\n   attachments_storage_path: /tmp"},{"title":"secret token file","path":"app/config/initializers/secret_token.rb","content":"Publify::Application.config.secret_token = ENV['SECRET_TOKEN']\r\n"},{"title":"app/config/secrets.yml","path":"app/config/secrets.yml","content":"production:\r\n  secret_key_base: \u003c%= ENV[\"SECRET_KEY_BASE\"] %\u003e\r\n"}],"file_write_permissions":[],"custom_php_inis":[],"apache_htaccess_files":[],"apache_httpd_configurations":[],"modules":[],"variables":[],"component_sources":[],"component_path":"","extract_components":false,"installation_report_template":"Goto _Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/ ","continuous_deployment":false,"database_seed_file":"","actionators":{}}}
+{
+  "schema": {
+    "type": "app_blueprint",
+    "version": {
+      "major": 1,
+      "minor": 0
+    },
+    "origin": "Engines Developer Studio 1.0"
+  },
+  "metadata": {
+    "blueprint": {
+      "version": {
+        "major": 0,
+        "minor": 1,
+        "level": "rc",
+        "patch": 0
+      },
+      "timestamp": null
+    },
+    "software": {
+      "display": {
+        "title": "Publify",
+        "label": "Publify",
+        "version": "",
+        "description": "Rails 4 based blog software ",
+        "url": ""
+      },
+      "license": {
+        "label": "GNU GENERAL PUBLIC LICENSE V3",
+        "url": "http://www.gnu.org/copyleft/gpl.html"
+      }
+    }
+  },
+  "software": {
+    "base": {
+      "name": "publify",
+      "framework": "rails4",
+      "memory": {
+        "required": "230",
+        "recommended": "345"
+      },
+      "http_protocol": "http_and_https",
+      "framework_port_override": "",
+      "deployment_type": "web",
+      "web_root_directory": "",
+      "continuous_deployment": false,
+      "install_form_comment": "",
+      "first_run_url": "",
+      "installation_report": "Goto _Engines_Builder(http_protocol)://_Engines_Builder(fqdn)/ \r\nFollow the instriuctions."
+    },
+    "ports": [
+
+    ],
+    "scripts": {
+      "start": {
+        "language": "sh",
+        "content": ""
+      },
+      "install": {
+        "language": "sh",
+        "content": ""
+      },
+      "post_install": {
+        "language": "sh",
+        "content": ""
+      },
+      "shutdown": {
+        "language": "sh",
+        "content": ""
+      }
+    },
+    "external_repositories": [
+
+    ],
+    "system_packages": [
+
+    ],
+    "installed_packages": [
+      {
+        "name": "publify",
+        "source_url": "https://github.com/publify/publify.git",
+        "destination": "./",
+        "extraction_command": "git",
+        "path_to_extracted": "publify"
+      }
+    ],
+    "required_modules": [
+
+    ],
+    "service_configurations": [
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "filesystem/local/filesystem",
+        "variables": {
+          "engine_path": "publifyfs",
+          "volume_src": " ",
+          "service_name": "_Engines_Builder(engine_name)",
+          "permissions": "rw",
+          "user": "_Engines_Builder(data_uid)",
+          "group": "_Engines_Builder(data_gid)"
+        }
+      },
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "database/sql/mysql",
+        "variables": {
+          "name": "_Engines_Builder(engine_name)",
+          "database_host": "_Engines_System(mysql_host)",
+          "database_name": "_Engines_Builder(engine_name)",
+          "db_username": "_Engines_Builder(engine_name)",
+          "db_password": "_Engines_System(random(10))",
+          "db_flavor": "mysql2",
+          "collation": "utf8_general_ci",
+          "full_access": "0"
+        }
+      }
+    ],
+    "environment_variables": [
+
+    ],
+    "template_files": [
+      {
+        "path": "app/config/mail.yml",
+        "language": "text",
+        "content": "production:\r\n default_url_options:\r\n  host: _Engines_Builder(fqdn)\r\n email_delivery:\r\n  delivery_method: :smtp\r\n  smtp_settings:\r\n   address: _Engines_System(smtp_host)\r\n   port: 25\r\n   domain: _Engines_System(default_domain)\r\n   enable_starttls_auto : false\r\n   attachments_storage_path: /tmp"
+      },
+      {
+        "path": "app/config/initializers/secret_token.rb",
+        "language": "text",
+        "content": "Publify::Application.config.secret_token = ENV['SECRET_TOKEN']\r\n"
+      },
+      {
+        "path": "app/config/secrets.yml",
+        "language": "text",
+        "content": "production:\r\n  secret_key_base: <%= ENV[\"SECRET_KEY_BASE\"] %>\r\n"
+      }
+    ],
+    "replacement_strings": [
+
+    ],
+    "database_seed": {
+      "language": "text",
+      "content": "",
+      "script": false
+    },
+    "file_write_permissions": [
+
+    ],
+    "persistent_directories": [
+      {
+        "path": "app/public/files "
+      }
+    ],
+    "persistent_files": [
+
+    ],
+    "components": {
+      "sources": [
+
+      ],
+      "path": "",
+      "extract": false
+    },
+    "workers": {
+      "blocking": "",
+      "commands": [
+
+      ]
+    },
+    "rake_tasks": [
+      {
+        "action": "db:migrate",
+        "always_run": true
+      },
+      {
+        "action": "db:seed",
+        "always_run": false
+      },
+      {
+        "action": "assets:precompile",
+        "always_run": true
+      }
+    ],
+    "custom_php_inis": [
+
+    ],
+    "apache_htaccess_files": [
+
+    ],
+    "apache_httpd_configurations": [
+
+    ],
+    "actionators": [
+
+    ],
+    "schedules": [
+
+    ]
+  }
+}

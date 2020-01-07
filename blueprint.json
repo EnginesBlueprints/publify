@@ -27,12 +27,12 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2020-01-07T14:40:59+11:00"
+    "timestamp": "2020-01-07T14:49:33+11:00"
   },
   "software": {
     "base": {
       "name": "publify",
-      "framework": "rails4",
+      "framework": "rails5",
       "deployment_type": "web",
       "http_protocol": "http_and_https",
       "memory": {

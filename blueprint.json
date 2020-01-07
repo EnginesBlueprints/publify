@@ -27,7 +27,7 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2020-01-08T08:46:09+11:00"
+    "timestamp": "2020-01-08T10:13:15+11:00"
   },
   "software": {
     "base": {
@@ -47,7 +47,7 @@
       },
       "install": {
         "language": "sh",
-        "content": "#!/bin/sh\r\n\r\nls -la /home/app\r\nls -la /home/app/public\r\n"
+        "content": "#!/bin/sh\r\nmkdir -p /home/app/public/files\r\nls -la /home/app\r\nls -la /home/app/public\r\n"
       },
       "post_install": {
         "language": "sh"

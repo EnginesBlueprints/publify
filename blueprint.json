@@ -27,7 +27,7 @@
         "url": "http://www.gnu.org/copyleft/gpl.html"
       }
     },
-    "timestamp": "2020-01-07T14:49:33+11:00"
+    "timestamp": "2020-01-08T07:49:02+11:00"
   },
   "software": {
     "base": {
@@ -69,7 +69,7 @@
         "publisher_namespace": "EnginesSystem",
         "type_path": "filesystem/local/filesystem",
         "variables": {
-          "service_name": "_Engines_Builder(engine_name)",
+          "service_name": "files",
           "volume_src": " ",
           "engine_path": "publifyfs",
           "permissions": "rw",
@@ -114,7 +114,8 @@
     },
     "persistent_directories": [
       {
-        "path": "app/public/files "
+        "path": "app/public/",
+        "volume_name": "files"
       }
     ],
     "framework_specific": {
